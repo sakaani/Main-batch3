@@ -1,0 +1,86 @@
+#main {
+    display: flex;
+    font-family: Garamond;
+}
+
+
+
+/* Subject Name is Fixed positioning to create basic effect */
+#title {
+    position: fixed;
+    top: 250px;
+    left: 90px;
+    color: rgba(136, 27, 27);
+    font-size: 40px;
+}
+
+/* Caption + Description text are Fixed positioning to match Subject Name */
+#text-div {
+    position: fixed;
+    top: 310px;
+    left: 90px;
+}
+
+/* To correct spacing between Caption + Description text */
+#img-caption {
+    position: fixed;
+    top: 350px;
+    left: 90px;
+}
+
+/* Tribute Info + Link are Relative positioning for best practice */
+#info-div {
+    position: relative;
+    top: 670px;
+    left: 50px;
+}
+
+
+
+/* Img element can be resized in compliance with User Story 8 */
+/* Img element is Absolute positioning, with z-index ensuring text is behind*/
+#image {
+    position: absolute;
+    top: 90px;
+    left: 680px;
+    width: 500px;
+    height: 550px;
+    z-index: 100;
+}
+
+/* Navbar element is Absolute positioning to remove white space */
+.nav {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1720px;
+    height: 46px;
+    background-color: rgb(0, 0, 0);
+}
+  
+/* Makes 1st (required) hyperlink more presentable */
+.nav a {
+    color: azure;
+    text-align: center;
+    padding: 10px 70px;
+    font-size: 22px;
+    text-decoration: none;
+    float: left;
+}
+  
+/* Makes button colour change when hovering */
+.nav a:hover {
+    background-color: rgba(136, 27, 27);
+    color: white;
+}
+
+/* Makes 2nd hyperlink more presentable */
+#sponsor {
+    color: azure;
+    text-align: center;
+    padding: 10px 70px;
+    font-size: 22px;
+    text-decoration: none;
+    position: relative;
+    left: 430px;
+}

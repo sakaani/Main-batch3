@@ -1,0 +1,131 @@
+* {
+    font-family: Garamond sans-serif;
+}
+/* BUG 1: can't split content into discrete sections - necessary for Hooks */
+/* BUG 2: convert static website into React Hooks */
+
+
+
+/* Webpage title is relative positioning */
+#title {
+    position: relative;
+    top: 130px;
+    left: 40px;
+    width: 480px;
+    font-size: 50px;
+    color: rgb(17, 10, 56);
+}
+
+/* Descriptive text on 1st Landing section are relative positioning */
+#landing-text {
+    position: relative;
+    top: 115px;
+    left: 40px;
+    width: 480px;
+    font-size: 16px;
+}
+
+#landing-explanation {
+    font-size: 17px;
+    font-weight: normal;
+    text-align: justify;
+}
+
+/* 2nd Criteria section after Landing section is relative positioning */
+#criteria-headline {
+    position: relative;
+    top: 225px;
+    left: 40px;
+    width: 480px;
+    font-size: 30px;
+    color: rgb(17, 10, 56);
+}
+
+#criteria-explanation {
+    position: relative;
+    top: 210px;
+    left: 40px;
+    width: 1100px;
+    font-size: 17px;
+    font-weight: normal;
+    text-align: justify;
+}
+
+
+
+/* Img elements are Absolute positioning, as anchor elements */
+#logo {
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    width: 150px;
+}
+
+#landing-image {
+    position: absolute;
+    top: 180px;
+    left: 610px;
+    width: 600px;
+    height: 360px;
+}
+
+
+
+/* Navbar element is Absolute positioning */
+.nav {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    width: 1200px;
+    height: 46px;
+    background-color: white;
+}
+  
+/* Auxiliary webpage links are to the left of Sign Up button */
+.nav a {
+    position: relative;
+    top: 10px;
+    left: 490px;
+    font-size: 17px;
+    color: rgb(17, 10, 56);
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 40px;
+}
+
+/* Makes button colour change when hovering */
+.nav a:hover {
+    color: white;
+    background-color: rgb(2, 3, 87);
+}
+
+/* Log In button is at the upper right corner of 1st Landing section */
+#signuporlogin {
+    position: relative;
+    top: 32px;
+    left: 980px;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(2, 3, 87);
+    text-align: center;
+    text-decoration: none;
+    padding: 18px 40px;
+    border-radius: 8px;
+    font-family: Verdana;
+}
+
+/* Sign Up-only button immediately below 1st Landing section explanation */
+#getustoseed {
+    position: relative;
+    top: 25px;
+    left: 0px;
+    font-size: 14px;
+    color: white;
+    background-color: rgb(2, 3, 87);
+    text-align: center;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-family: Verdana;
+}
+

@@ -1,0 +1,223 @@
+* {
+    font-family: Garamond sans-serif;
+}
+
+
+/* Most survey form sections are relative positioning */
+#title {
+    position: relative;
+    top: 110px;
+    left: 310px;
+    width: 770px;
+    font-size: 40px;
+    color: rgb(17, 10, 56);
+}
+
+#description {
+    position: relative;
+    top: 95px;
+    left: 270px;
+    width: 770px;
+    color: rgb(17, 10, 56);
+}
+
+#survey-form {
+    position: relative;
+    top: 115px;
+    left: 380px;
+    width: 450px;
+}
+
+#heading-label {
+    position: relative;
+    top: 0px;
+    left: 270px;
+}
+
+#name-label {
+    position: relative;
+    top: 0px;
+    left: 130px;
+}
+
+#name {
+    position: relative;
+    top: 0px;
+    left: 135px;
+}
+
+#email-label {
+    position: relative;
+    top: 50px;
+    left: -115px;
+}
+
+#email {
+    position: relative;
+    top: 30px;
+    left: 230px;
+}
+
+#number-label {
+    position: relative;
+    top: 80px;
+    left: -40px;
+}
+
+#number {
+    position: relative;
+    top: 80px;
+    left: -35px;
+}
+
+#radio-label-1 {
+    position: relative;
+    top: 105px;
+    left: 130px;
+}
+
+.radio-stage {
+    position: relative;
+    top: 85px;
+    left: 225px;
+}
+
+#dropdown-label-1 {
+    position: relative;
+    top: 170px;
+    left: -145px;
+}
+
+#dropdown {
+    position: relative;
+    top: 170px;
+    left: -140px;
+}
+
+#radio-label-2 {
+    position: relative;
+    top: 145px;
+    left: 230px;
+}
+
+.location-UK {
+    position: relative;
+    top: 140px;
+    left: 120px;
+    width: 480px;
+}
+
+.location-Density {
+    position: relative;
+    top: 150px;
+    left: 180px;
+    width: 480px;
+}
+
+#checkbox-label {
+    position: relative;
+    top: 160px;
+    left: 225px;
+}
+
+.checkbox-engineer {
+    position: relative;
+    top: 160px;
+    left: 70px;
+    width: 480px;
+}
+
+.checkbox-nonengineer {
+    position: relative;
+    top: 170px;
+    left: 120px;
+    width: 480px;
+}
+
+#pitch-label {
+    position: relative;
+    top: 180px;
+    left: 215px;
+}
+
+#pitch {
+    position: relative;
+    top: 180px;
+    left: 115px;
+}
+
+/* Submit button is stylised */
+#submit {
+    position: relative;
+    top: 210px;
+    left: 240px;
+    font-size: 14px;
+    color: white;
+    background-color: rgb(2, 3, 87);
+    text-align: center;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-family: Verdana;
+}
+
+
+/* Img elements are Absolute positioning, as anchor elements */
+#logo {
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    width: 150px;
+}
+
+#upplane {
+    position: absolute;
+    top: -20px;
+    left: 1100px;
+    width: 300px;
+}
+
+#leftplane {
+    position: absolute;
+    top: 450px;
+    left: 0px;
+    width: 300px;
+}
+
+#rightplane {
+    position: absolute;
+    top: 600px;
+    left: 800px;
+    width: 660px;
+}
+
+/* Navbar element is Absolute positioning as constant element across pages*/
+.nav {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    width: 1200px;
+    height: 46px;
+    background-color: white;
+}
+  
+/* Auxiliary webpage links remain where they were on Home webpage */
+.nav a {
+    position: relative;
+    top: 10px;
+    left: 490px;
+    font-size: 17px;
+    color: rgb(17, 10, 56);
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 40px;
+}
+
+/* Makes button colour change when hovering */
+.nav a:hover {
+    color: white;
+    background-color: rgb(2, 3, 87);
+}
+
+
+

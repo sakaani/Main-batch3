@@ -1,0 +1,146 @@
+/* BUG 1: can't split content into discrete sections - necessary for Hooks */
+
+/* CSS for top-level divs in Homepage */
+* {
+    font-family: Garamond sans-serif;
+}
+
+.homeHeader {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    padding-bottom: 1px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.homeLanding {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    padding-bottom: 3px;
+}
+
+.homeCriteria {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    flex-wrap: wrap;
+    background-color: #FEFEFE;
+}
+
+
+/* Navbar CSS */
+.homeHeader .nav {
+    width: 480px;
+    height: 20px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    left: 160px;
+}
+  
+.homeHeader .nav a {
+    font-size: 17px;
+    color: rgb(17, 10, 56);
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 40px;
+}
+
+/* Makes button colour change when hovering */
+.nav a:hover {
+    color: white;
+    background-color: rgb(10, 10, 90);
+    padding: 13px 25px;
+    border-radius: 8px;
+}
+
+/* Log In button is at the right corner of Homepage */
+#signuporlogin {
+    height: 23px;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(10, 10, 90);
+    text-align: center;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-family: Verdana;
+}
+
+
+/* Text CSS for Homepage 1st landing section below header section */
+#title {
+    width: 480px;
+    font-size: 45px;
+    color: rgb(10, 10, 90);
+}
+
+#headline {
+    width: 480px;
+    font-size: 21px;
+    position: relative;
+    top: -20px;
+}
+
+#explanation {
+    font-size: 17px;
+    font-weight: normal;
+    text-align: justify;
+    position: relative;
+    top: -20px;
+}
+
+/* Sign Up-only button immediately below 1st landing section explanation */
+#getustoseed {
+    font-size: 14px;
+    color: white;
+    background-color: rgb(10, 10, 90);
+    text-align: center;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-family: Verdana;
+    z-index: 100;
+}
+
+/* Img element CSS */
+#logo {
+    width: 150px;
+}
+
+#landing-image {
+    width: 570px;
+    height: 330px;
+}
+
+
+/* Text CSS for 2nd criteria section below 1st landing section */
+#criteria-headline {
+    width: 480px;
+    font-size: 30px;
+    color: rgb(10, 10, 90);
+}
+
+#criteria-explanation {
+    width: 1200px;
+    font-size: 17px;
+    font-weight: normal;
+    text-align: justify;
+    position: relative;
+    top: -30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

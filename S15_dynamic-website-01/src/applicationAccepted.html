@@ -1,0 +1,168 @@
+<html>
+    
+<head>
+    <title>Mote Launch v4.0 Calculator</title>
+    <link href = 'AppTest.css' type = 'text/css' rel = 'stylesheet' />
+    <link href = '../public/fonts/font.css' rel = 'stylesheet' />
+
+    <meta charset = 'UTF-8'>
+    <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'>
+</head>
+
+
+<body>
+
+<!-- Creates container to apply top-level CSS -->
+<div class = 'container'>
+<!-- Calculator composed on Display CSS and Keypad CSS -->
+<div class = 'acceptedCalculator'>
+    <div class = 'calculator-display'>0</div>
+
+    <div class = 'calculator-keys'>
+        <button class = 'key-operator' data-action = 'add'>+</button>
+        <button class = 'key-operator' data-action = 'subtract'>-</button>
+        <button class = 'key-operator' data-action = 'multiply'>&times;</button>
+        <button class = 'key-operator' data-action = 'divide'>÷</button>     
+
+        <button class = 'sevennine'>7</button>
+        <button class = 'sevennine'>8</button>   
+        <button class = 'sevennine'>9</button>
+
+
+        <button class = 'foursix'>4</button>   
+        <button class = 'foursix'>5</button>   
+        <button class = 'foursix'>6</button>
+
+        <button class = 'onethree'>1</button>   
+        <button class = 'onethree'>2</button>   
+        <button class = 'onethree'>3</button>
+
+        <button class = 'zeroclear'>0</button>
+        <button class = 'zeroclear' data-action = 'decimal'>.</button>
+        <button class = 'zeroclear' data-action = 'clear'>AC</button>
+
+        <button class = 'key-equal' data-action = 'equal'>=</button>
+    </div>
+</div> 
+</div>
+
+
+<script>
+
+// Creates const for all Keypad keys then classifies into 5 response types
+    const accepted_calculator = document.querySelector('.acceptedCalculator')
+    const keys = accepted_calculator.querySelector('.calculator-keys')
+
+    keys.addEventListener('click', e => {
+        if (e.target.matches('button')) {
+            const key = e.target
+            const action = key.dataset.action
+            // Shared with Display Code
+
+            if (!action) {
+                console.log('number key!')
+            }
+
+            if (
+                action == 'add' || 
+                action == 'subtract' || 
+                action == 'multiply' || 
+                action == 'divide'
+            ) {
+                console.log('operator key!')
+            }
+
+            if (action == 'decimal') {
+                console.log('decimal key!')
+            }
+
+            if (action == 'clear') {
+                console.log('clear key!')
+            }
+
+            if (action == 'equal') {
+                console.log('equal key!')
+            }
+
+        }
+    })
+
+    const display = document.querySelector('.calculator__display')
+
+    keys.addEventListener('click', e => {
+    if (e.target.matches('button')) {
+        const key = e.target
+        const action = key.dataset.action
+        // Shared with Display Code
+
+        const displayedNum = display.textContent
+        const keyContent = key.textContent
+        
+        // First If statement: replaces 0 with pressed key OR appends pressed key to preceding Number
+        if (!action) {
+            if (displayedNum === '0') {
+                display.textContent = keyContent
+            } else {
+                display.textContent = displayedNum + keyContent
+            }
+
+            // Scenario 1.1: appends one decimal to preceding Number
+            if (action === 'decimal') {
+                display.textContent = displayedNum + '.'
+            }
+
+            // Scenario 1.2 or 1.1.1: operator after preceding Number or preceding Decimal
+            if (
+                action === 'add' ||
+                action === 'subtract' ||
+                action === 'multiply' ||
+                action === 'divide'
+            ) {
+                key.classList.add('is-depressed')
+            }
+
+            // Scenario 1.2.1 or 1.1.1.1: new number + after preceding Operator
+            keys.addEventListener('click', e => {
+                if (e.target.matches('button')) {
+                    const key = e.target
+                    
+                    // Remove .is-depressed class from all keys: releases "pressed highlight"
+                    Array.from(key.parentNode.children)
+                        .forEach(k => k.classList.remove('is-depressed'))
+
+                    if (
+                        action === 'add' ||
+                        action === 'subtract' ||
+                        action === 'multiply' ||
+                        action === 'divide'
+                    ) {
+                        key.classList.add('is-depressed')
+                        // Add custom attribute to tell if preceding response is Operator
+                        calculator.dataset.previousKeyType = 'operator'
+                    }
+
+                        // Display of new number through Second If statement (replication of First)
+                    const previousKeyType = calculator.dataset.previousKeyType
+
+                    if (!action) {
+                        if (displayedNum === '0' || previousKeyType === 'operator') {
+                            display.textContent = keyContent
+                        } else {
+                            display.textContent = displayedNum + keyContent
+                        }
+                    }
+
+
+                }
+            })
+
+        }
+
+    }
+    })
+
+</script>
+
+</body>
+
+</html>

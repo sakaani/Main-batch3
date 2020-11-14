@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang = en>
+
+<head>
+    <title>Mote Launch v4.0 Email Rejected</title>
+    <link href = 'App.css' type = 'text/css' rel = 'stylesheet' />
+    <link href = 'https://fonts.googleapis.com/css2?family=Barlow Condensed' rel = "stylesheet">
+
+    <meta charset = 'UTF-8'>
+    <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'>
+</head>
+
+
+<body>
+
+
+<!-- Email data receipt alert HTML code -->
+    <script>
+        function processForm() { 
+            const url = location.search.substring(1).split('&');
+            const temp = url[0].split('=');
+            e = unescape( temp[1] );
+            alert(e + ' has entered our database.');
+        }
+        processForm();
+    </script> 
+
+
+<!-- Uniform Header HTML code -->
+    <header class = 'email0Header'>
+
+        <img id = 'logo' src = 'assets/logo.png' alt = 'Logo'/>
+
+        <div class = 'nav-bar'>
+            <a href = 'service.html' class = 'nav-link'>Home</a>
+        </div>
+
+        <a id = 'enroll' href = 'signup.html' target = '_blank'><p id = 'enroll_text'>ENROLL NOW</p></a>
+        
+    </header>
+
+
+<!-- Headline Text HTML code -->
+    <div class = 'email0Intro'>
+
+        <h1 id = 'email0-title'>
+            Cellphone Number Accepted
+        </h1>
+
+        <h3 id = 'email0-description'>
+            Our team will follow up shortly, to answer any queries.
+        </h3>
+
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang = en>
+
+<head>
+    <title>Mote Launch v4.0 Registration</title>
+    <link href = 'App.css' type = 'text/css' rel = 'stylesheet' />
+    <link href = 'https://fonts.googleapis.com/css2?family=Barlow Condensed' rel = "stylesheet">
+
+    <meta charset = 'UTF-8'>
+    <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'>
+</head>
+
+
+<body>
+
+
+<!-- Uniform Header HTML code -->
+    <header id = 'formHeader'>
+        <img id = 'logo' src = 'assets/logo.png' alt = 'Logo'/>
+
+        <div class = 'nav-bar'>
+            <a href = 'service.html' class = 'nav-link'>Home</a>
+            <a href = '#formLegal' class = 'nav-link'>Legal</a>
+        </div>
+
+        <a id = 'enroll' href = 'signup.html' target = '_blank'><p id = 'enroll_text'>ENROLL NOW</p></a>
+    </header>
+
+
+<!-- Multi-field survey form HTML code -->
+    <div id = 'formRegistration'>
+        <form id = 'survey' action = 'email_accepted.html' method = 'GET'>
+
+            <h3 id = 'heading-label'>My Details</h3>
+
+            <div class = 'basic-section'>
+                
+                <div class = 'personal'>
+                    <label id = 'name-label'>Full Name</label>
+                        <input id = 'name' type = 'text' placeholder = 'John Rivera' name = 'name_data' />
+                        <!-- name_data = name attribute necessary for passing startup name to email_accepted.html -->
+                </div>
+        
+                <div class = 'mail'>
+                    <label id = 'email-label'>Lead Email (Preferably Linked to Zoom)</label>
+                        <input id = 'email' type = 'email' placeholder = 'johnr@yahoo.com' />
+                </div>
+                
+                <!-- CHANGE TO CELLPHONE INPUT -->
+                <div class = 'cell'>
+                    <label id = 'number-label'>Cellphone Number</label>
+                        <input id = 'number' type = 'number' placeholder = '2' min = '1' max = '5'/>
+                </div>
+                
+                <div class = 'status'>
+                    <label id = 'dropdown-label'>Life Status</label>
+                    <select id = 'dropdown'>
+                        <option>High School</option>
+                        <option>College or Graduate School</option>
+                        <option>Full-Time Work</option>
+                        <option>Self-Employed</option>
+                        <option>Looking for the Next Challenge!</option>
+                    </select>
+                </div>
+    
+            </div>
+
+
+            <div class = 'location-section'> 
+                <label id = 'radio-label-2'><h3>I Am Based In</h3></label>
+
+                <div class = 'location-UK'>
+                    <input id = 'cardiffUK' type = 'radio' value = 'Cardiff' name = 'UK'/>
+                    <label for = 'cardiffUK'>North America</label>
+                    <input id = 'edinburghUK' type = 'radio' value = 'Edinburgh' name = 'UK'/>
+                    <label for = 'edinburghUK'>The Philippines</label>
+                    <input id = 'londonUK' type = 'radio' value = 'London' name = 'UK'/>
+                    <label for = 'londonUK'>The Middle East</label>
+                    <input id = 'otherUK' type = 'radio' value = 'other' name = 'UK'/>
+                    <label for = 'otherUK'>Another Country</label>
+                </div>
+            </div> 
+
+
+            <div class = 'hiring-section'>
+                <label id = 'checkbox-label'><h3>I Have the Following</h3></label>
+
+                <div class = 'checkbox-engineer'>
+                    <input id = 'fullstackengineer' type = 'checkbox' value = 'fullstack' name = 'engineer'/>
+                    <label for = 'fullstackengineer'>Tech Degree (Computer Science, Computer Engineering, ECE)</label>
+                    <input id = 'backendengineer' type = 'checkbox' value = 'backend' name = 'engineer'/>
+                    <label for = 'backendengineer'>Non-Tech Degree (diplomas, Business, Statistics)</label>
+                    <input id = 'frontendengineer' type = 'checkbox' value = 'frontend' name = 'engineer'/>
+                    <label for = 'frontendengineer'>Self-Taught Programming or Work Experience</label>
+                </div>
+            </div>
+
+
+            <div class = 'submit-section'>
+                <label id = 'pitch-label' for = 'pitch'><h3>To the Batch, I Will Contribute</h3></label>
+                <textarea id = 'pitch' name = 'pitch' rows = '4' cols = '50'>
+Please describe what unique factor you can offer your potential classmates. This can be recruiting tips from personal experience, insight on Java, business savvy, or art talent!
+                </textarea>
+
+                <input id = 'submit' type = 'submit' value = 'SUBMIT'/>
+            </div>
+
+        </form>
+    </div>
+
+
+    <!-- Uniform Footer HTML code -->
+    <footer id = 'formLegal'>
+        <label><h2>Legal Stuff</h2></label>
+
+        <p id = 'legal-text'>
+            We can sue you if you refuse to pay, despite getting a tech job. 
+            We can sue you if you harass classmates or teachers.
+        </p>
+    </footer>
+
+
+</body>
+</html>

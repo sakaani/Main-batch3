@@ -1,0 +1,1017 @@
+/* BUG 1: can't split content into discrete sections - necessary for Hooks */
+* { box-sizing: border-box; }
+html, body {
+    height: 100%;
+}
+
+
+/* Webpage 2: REGISTRATION CSS */
+/* CSS for top-level divs in Homepage */
+#formHeader {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+
+    align-items: center;
+    z-index: 90;
+
+    width: 1280px;
+    height: 80px;
+    background-color: white;
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+#formRegistration {
+    display: flex;
+
+    justify-content: center;
+
+    position: relative;
+    top: 120px;
+}
+
+#formLegal {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+
+    align-items: center;
+
+    position: relative;
+    top: 230px;
+}
+
+
+/* Header and Navbar CSS */
+#formHeader .nav-bar {
+    width: 480px;
+    height: 20px;
+    color: rgb(237,242,244);
+
+    position: relative;
+    left: 320px;
+}
+
+#formHeader .nav-bar a {
+    padding: 10px 40px;
+
+    color: rgb(217, 4, 41);
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Makes button colour change when hovering */
+#formHeader .nav-bar a:hover {
+    padding: 13px 25px;
+
+    color: rgb(237,242,244);
+    background-color: rgb(217, 4, 41);
+
+    border-radius: 8px;
+}
+
+/* Log In button is at the top right corner of Homepage */
+#formHeader #enroll {
+    padding: 23px 25px;
+
+    height: 23px;
+    color: rgb(237,242,244);
+    background-color: rgb(217, 4, 41);
+
+    position: relative;
+    right: -460px;
+
+    border-radius: 8px;
+    font-family: Verdana;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#formHeader #enroll #enroll_text {
+    position: relative;
+    top: -25px;
+}
+
+
+/* Img CSS */
+#logo {
+    width: 135px;
+
+    position: relative;
+    left: 30px;
+}
+
+
+/* Survey headings CSS */
+#formRegistration #survey {
+    display: flex;
+    flex-direction: column;
+}
+
+/* First Part */
+#formRegistration .basic-section {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    top: 50px;
+}
+
+#formRegistration #heading-label {
+    display: flex;
+
+    justify-content: center;
+
+    position: relative;
+    top: -10px;
+}
+
+#formRegistration .basic-section .personal {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    position: relative;
+    top: -60px;
+}
+
+#formRegistration .basic-section .mail {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    position: relative;
+    top: -45px;
+}
+
+#formRegistration .basic-section .cell {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    position: relative;
+    top: -30px;
+}
+
+#formRegistration .basic-section .status {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    position: relative;
+    top: -15px;
+}
+
+
+/* Second Part */
+#formRegistration .location-section {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    top: 60px;
+}
+
+#formRegistration #radio-label-2 {
+    display: flex;
+    justify-content: center;
+}
+
+#formRegistration .location-UK {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    position: relative;
+    top: -20px;
+}
+
+#formRegistration .location-density {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -20px;
+}
+
+
+/* Third Part */
+#formRegistration .hiring-section {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    top: 55px;
+}
+
+#formRegistration #checkbox-label {
+    display: flex;
+
+    justify-content: center;
+}
+
+#formRegistration .checkbox-engineer {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+
+    justify-content: center;
+
+    position: relative;
+    top: -20px;
+}
+
+
+/* Fourth Part */
+#formRegistration .submit-section {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 80px;
+
+    align-items: center;
+
+    position: relative;
+    top: 50px;
+}
+
+#formRegistration #pitch-label {
+    display: flex;
+
+    justify-content: center;
+}
+
+
+/* Submit button is stylised */
+#formRegistration .submit-section #submit {
+    padding: 13px 25px;
+
+    width: 30%;
+    color: white;
+    background-color: rgb(43,45,66);
+
+    position: relative;
+    top: 30px;
+
+    font-family: Verdana;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+#legal-text {
+    position: relative;
+    top: -20px;
+}
+
+
+
+/* Webpage 3: HOMEPAGE CSS */
+/* CSS for top-level divs in Homepage */
+#homeHeader {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+
+    align-items: center;
+    z-index: 90;
+
+    width: 1280px;
+    height: 80px;
+    background-color: white;
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+#homeAbout {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 140px;
+
+    justify-content: center;
+}
+
+#homeProcess {
+    display: flex;
+
+    justify-content: flex-end;
+
+    /* MALFUNCTIONING */
+    border: 1px rgb(217, 4, 41);
+    border-radius: 17% 83% 100% 0% / 49% 35% 65% 51%;
+
+    position: relative;
+    top: -1000px;
+}
+
+#homeContact {
+    display: flex;
+    padding-bottom: 50px;
+
+    justify-content: center;
+
+    position: relative;
+    top: -390px;
+}
+
+
+/* Social proof ticker CSS */
+@-webkit-keyframes ticker {
+    
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+    }
+  
+    100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+}
+
+@keyframes ticker {
+
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+    }
+
+    100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+
+}
+
+.about-social {
+    box-sizing: content-box;
+    padding-left: 100%;
+    overflow: hidden;
+
+    width: 10%;
+    height: 4rem;
+    background-color: rgba(#000, 0.9); 
+
+    position: relative;
+    top: -55px;
+    left: -7px;
+}
+
+.ticker {
+    box-sizing: content-box;
+    display: inline-block;
+    padding-right: 100%;
+
+    height: 4rem;
+    line-height: 2rem;  
+
+    white-space: nowrap;
+    font-size: 22px;
+    
+    -webkit-animation-iteration-count: infinite; 
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-name: ticker;
+            animation-name: ticker;
+    -webkit-animation-duration: 20s;
+            animation-duration: 20s;
+}
+
+
+/* Header and Navbar CSS */
+#homeHeader .nav-bar {
+    width: 480px;
+    height: 20px;
+    color: rgb(237,242,244);
+
+    position: relative;
+    left: 320px;
+}
+
+#homeHeader .nav-bar a {
+    padding: 10px 40px;
+
+    color: rgb(217, 4, 41);
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Makes button colour change when hovering */
+#homeHeader .nav-bar a:hover {
+    padding: 13px 25px;
+
+    color: rgb(237,242,244);
+    background-color: rgb(217, 4, 41);
+
+    border-radius: 8px;
+}
+
+/* Log In button is at the top right corner of Homepage */
+#homeHeader #enroll {
+    padding: 23px 25px;
+
+    height: 23px;
+    color: rgb(237,242,244);
+    background-color: rgb(217, 4, 41);
+
+    position: relative;
+    right: -460px;
+
+    border-radius: 8px;
+    font-family: Verdana;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#homeHeader #enroll #enroll_text {
+    position: relative;
+    top: -25px;
+}
+
+
+/* Img and embedded video element CSS */
+#logo {
+    width: 135px;
+
+    position: relative;
+    left: 30px;
+}
+
+#about-img1 {
+    width: 1100px;
+
+    position: relative;
+    top: -550px;
+    left: 320px;
+}
+
+#video {
+    position: relative;
+    top: -1180px;
+    left: 520px;
+}
+
+#about-img2 {
+    width: 400px;
+
+    position: relative;
+    top: -40px;
+    left: 40px;
+}
+
+
+/* Intro text CSS */
+/* Code block directly below moves entire left vertical third of hero section */
+#homeAbout .about-hero {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    position: relative;
+    top: -50px;
+}
+
+#homeAbout #about-title {
+    color: rgb(43,45,66);
+
+    position: relative;
+    left: 50px;
+}
+
+#homeAbout #about-sub {
+    color: rgb(43,45,66);
+
+    position: relative;
+    left: 60px;
+    top: -30px;
+
+    font-weight: normal;
+}
+
+#homeAbout #about-description {
+    color: rgb(43,45,66);
+
+    width: 350px;
+
+    position: relative;
+    left: 60px;
+    top: -40px;
+
+    font-size: 22px;
+    text-align: center;
+}
+
+/* Log In button is at the lower left corner of hero section */
+#homeAbout #enroll {
+    padding: 28px 25px;
+
+    height: 21px;
+    width: 160px;
+    color: rgb(237,242,244);
+    background-color: rgb(43,45,66);
+
+    position: relative;
+    top: -30px;
+    left: 170px;
+
+    border-radius: 28px;
+    font-family: Verdana;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#homeAbout #enroll #enroll_text {
+    position: relative;
+    top: -25px;
+}
+
+
+/* 3 image card section */
+#homeProcess #process-cards {
+    display: flex;
+    flex-direction: row;
+
+    position: relative;
+    top: -180px;
+}
+
+#homeProcess .card-set {
+    display: flex;
+    flex-direction: column-reverse;
+
+    align-items: center;
+}
+
+#homeProcess .cards {
+    width: 350px;
+}
+
+#homeProcess #card-set1 {
+    position: relative;
+    left: 160px;
+}
+
+#homeProcess #card-set2 {
+    position: relative;
+    left: 210px;
+}
+
+#homeProcess #card-set3 {
+    position: relative;
+    left: 260px;
+}
+
+
+/* Course method section */
+#process-course {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    top: 410px;
+    left: -260px;
+}
+
+#process-course .course-description {
+    text-align: center;
+    font-weight: normal;
+}
+
+#process-course #course-description0 {
+    width: 300px;
+
+    text-align: center;
+}
+
+
+/* Footer CSS */
+#homeContact #submit-section {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+#homeContact #contact-label {
+    display: flex;
+
+    justify-content: center;
+
+    position: relative;
+    top: -90px;
+}
+
+#homeContact #contact-description {
+    display: flex;
+
+    justify-content: center;
+
+    position: relative;
+    top: -80px;
+
+    font-weight: normal;
+}
+
+#homeContact #email-label {
+    position: relative;
+    top: -75px;
+}
+
+#homeContact #email {
+    position: relative;
+    top: -75px;
+}
+
+/* Submit button is stylised */
+#homeContact #submit {
+    padding: 13px 25px;
+
+    width: 45%;
+    color: rgb(237,242,244);
+    background-color: rgb(43,45,66);
+
+    position: relative;
+    top: -35px;
+
+    border-radius: 28px;
+    font-family: Verdana;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+/* iPhone 6 to 8 Plus breakpoint CSS for Webpage 3 */
+@media only screen and (max-width: 414px) {
+    
+    #serviceHeader {
+        display: flex;
+        flex-direction: row;
+    
+        justify-content: flex-start;
+        align-items: center;
+    
+        width: 1255px;
+        background-color: rgb(237,242,244);
+
+        position: fixed;
+        top: 0px;
+    }
+    
+    #serviceIntro {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    
+        align-items: center;
+    }
+    
+    #serviceExplanation {
+        display: flex;
+    
+        justify-content: flex-end;
+
+        position: relative;
+        top: 50px;
+    }
+    
+    #serviceFooter {
+        display: flex;
+        flex-direction: column;
+    
+        align-items: center;
+    
+        position: relative;
+        top: 280px;
+        left: 0px;
+    }
+
+
+    /* Img and embedded video element CSS */
+    #intro-img {
+        width: 200px;
+    }
+
+    
+    /* Header and Navbar CSS */
+    #serviceHeader .nav-bar {
+        width: 150px;
+        height: 20px;
+        background-color: rgb(237,242,244);
+
+        text-align: center;
+        position: relative;
+        top: -20px;
+        left: 90px;
+    }
+
+    #serviceHeader .nav-bar a {
+        font-size: 17px;
+        color: rgb(17, 10, 56);
+        text-align: center;
+        text-decoration: none;
+    }
+    
+    /* Makes button colour change when hovering */
+    #serviceHeader .nav-bar a:hover {
+        padding: 1px 25px;
+
+        color: white;
+        background-color: rgb(10, 10, 90);
+
+        border-radius: 8px;
+    }
+
+
+    /* Intro text CSS */
+    #serviceIntro #intro-title {
+        position: relative;
+        top: -30px;
+        left: 5px;
+
+        font-size: 30px;
+    }
+
+    #serviceIntro #iphone6 {
+        display: flex;
+        flex-direction: column;
+
+        width: 270px;
+
+        position: relative;
+        top: 20px;
+        left: -180px;
+
+        text-align: center;
+        font-size: 17px;
+        font-weight: normal;
+    }
+
+    #serviceIntro #intro-labels {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-around;
+        align-items: center;
+
+        position: relative;
+        top: -30px;
+        left: 15px;
+    }
+
+
+    /* Submit button is stylised */
+    #submit {
+        padding: 13px 25px;
+
+        width: 30%;
+        color: rgb(237,242,244);
+        background-color: rgb(10, 10, 90);
+
+        position: relative;
+        top: 30px;
+
+        font-family: Verdana;
+        font-size: 14px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+    }
+
+}
+
+
+
+/* Webpage 4: EMAIL REJECTION CSS */
+/* CSS for top-level divs in Email Rejection */
+.email0Header {
+    display: flex;
+    flex-direction: row;
+    padding-top: 23px;
+    padding-left: 15px;
+
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 90;
+
+    width: 1255px;
+    height: 80px;
+    background-color: white;
+
+    position: fixed;
+    top: 0px;
+}
+
+.email0Intro {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 230px;
+
+    align-items: center;
+}
+
+#email0-description {
+    font-weight: normal;
+}
+
+
+/* Header and Navbar CSS */
+.email0Header .nav-bar {
+    width: 480px;
+    height: 20px;
+    color: rgb(237,242,244);
+
+    position: relative;
+    left: 320px;
+}
+
+.email0Header .nav-bar a {
+    padding: 10px 40px;
+
+    color: rgb(217, 4, 41);
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Makes button colour change when hovering */
+.email0Header .nav-bar a:hover {
+    padding: 13px 25px;
+
+    color: rgb(237,242,244);
+    background-color: rgb(217, 4, 41);
+
+    border-radius: 8px;
+}
+
+/* Log In button is at the top right corner of Homepage */
+.email0Header #enroll {
+    padding: 23px 25px;
+
+    height: 23px;
+    color: rgb(237,242,244);
+    background-color: rgb(217, 4, 41);
+
+    position: relative;
+    right: -460px;
+
+    border-radius: 8px;
+    font-family: Verdana;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.email0Header #enroll #enroll_text {
+    position: relative;
+    top: -25px;
+}
+
+
+/* Img and embedded video element CSS */
+#logo {
+    width: 135px;
+
+    position: relative;
+    left: 30px;
+}
+
+
+
+/* iPhone 6 to 8 Plus breakpoint CSS for Webpage 4 */
+@media only screen and (max-width: 414px) {
+    
+    #email0-description {
+        display: flex;
+
+        width: 250px;
+
+        text-align: center;
+        font-weight: normal;
+    }
+
+}
+
+
+
+/* Webpage 5: EMAIL ACCEPTANCE CSS */
+/* CSS for top-level divs in Email Acceptance */
+.email1Header {
+    display: flex;
+    flex-direction: row;
+    padding-top: 23px;
+    padding-left: 15px;
+
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 90;
+
+    width: 1255px;
+    height: 80px;
+    background-color: white;
+
+    position: fixed;
+    top: 0px;
+}
+
+.email1Intro {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 230px;
+
+    align-items: center;
+}
+
+#email1-description {
+    font-weight: normal;
+}
+
+
+/* Header and Navbar CSS */
+.email1Header .nav-bar {
+    width: 480px;
+    height: 20px;
+    color: rgb(237,242,244);
+
+    position: relative;
+    left: 320px;
+}
+
+.email1Header .nav-bar a {
+    padding: 10px 40px;
+
+    color: rgb(217, 4, 41);
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Makes button colour change when hovering */
+.email1Header .nav-bar a:hover {
+    padding: 13px 25px;
+
+    color: rgb(237,242,244);
+    background-color: rgb(217, 4, 41);
+
+    border-radius: 8px;
+}
+
+/* Log In button is at the top right corner of Homepage */
+.email1Header #enroll {
+    padding: 23px 25px;
+
+    height: 23px;
+    color: rgb(237,242,244);
+    background-color: rgb(217, 4, 41);
+
+    position: relative;
+    right: -460px;
+
+    border-radius: 8px;
+    font-family: Verdana;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.email1Header #enroll #enroll_text {
+    position: relative;
+    top: -25px;
+}
+
+
+/* Img and embedded video element CSS */
+#logo {
+    width: 135px;
+
+    position: relative;
+    left: 30px;
+}
+
+
+

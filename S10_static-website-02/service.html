@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang = en>
+
+<head>
+    <title>Mote Launch v4.0 Service</title>
+    <link href = 'App.css' type = 'text/css' rel = 'stylesheet' />
+    <link href = 'https://fonts.googleapis.com/css2?family=Barlow Condensed' rel = "stylesheet">
+
+    <meta charset = 'UTF-8'>
+    <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'>
+</head>
+
+
+<body>
+
+    
+<!-- Uniform Header HTML code -->
+    <header id = 'homeHeader'>
+        <img id = 'logo' src = 'assets/logo.png' alt = 'Logo'/>
+
+        <div class = 'nav-bar'>
+            <a href = '#homeAbout' class = 'nav-link'>About</a>
+            <a href = '#process-cards' class = 'nav-link'>Process</a>
+            <a href = '#contact-label' class = 'nav-link'>Contact</a>
+        </div>
+
+        <a id = 'enroll' href = 'signup.html' target = '_blank'><p id = 'enroll_text'>ENROLL NOW</p></a>
+    </header>
+
+
+<!-- Headline Text HTML code -->
+    <div id = 'homeAbout'>
+
+        <div class = 'about-social'>
+            <div class = 'ticker'>
+              <div class = 'ticker__item'>I used to be a tester. Now, I can create entire apps! - Nanay Mo, Facebook</div>
+              <div class = 'ticker__item'>I couldn't design 'modern' websites before Avion. But I just got a design award last week! - @MatthewF, Twitter</div>
+              <div class = 'ticker__item'>I liek Victor.</div>
+              <div class = 'ticker__item'>Hot mga kaklase ko.</div>
+            </div>
+        </div>
+
+        <div class = 'about-hero'>
+            <h1 id = 'about-title'>
+                Turn ON Your Tech Career
+            </h1>
+
+            <h2 id = 'about-sub'>
+                Full-Stack Programmer in 3 Months!
+            </h2>
+
+            <img id = 'about-img2' src = 'assets/landing_2.png' alt = 'Graphic 1'/>
+
+            <p id = 'about-description'>
+                Pay only after you land a tech job!
+            </p>
+
+            <a id = 'enroll' href = 'signup.html' target = '_blank'><p id = 'enroll_text'>ENROLL NOW</p></a>
+        </div>
+
+        <img id = 'about-img1' src = 'assets/landing_1.png' alt = 'Landing1'/>
+
+        <video id = 'video' controls = 'controls' src = 'assets/video.mp4' 
+            width = "700" height = "473">
+            Your browser does not support the HTML5 Video element.
+        </video>
+
+        <!-- <iframe id = 'video' width = "700" height = "473" 
+            src="https://www.youtube.com/embed/7QCYcTSvA4k" 
+            frameborder = "0" allow = "accelerometer; autoplay; 
+            clipboard-write; encrypted-media; gyroscope; 
+            picture-in-picture" allowfullscreen>
+        </iframe> -->
+
+    </div>
+
+
+<!-- Cards and Process HTML code -->
+    <div id = 'homeProcess'>
+
+        <section id = 'process-cards'>
+            <div class = 'card-set' id = 'card-set1'>
+                <h3 id = 'card1'>
+                    Curriculum Based on Real-Life
+                </h3>
+                <img class = 'cards' src = 'assets/process_1.svg' alt = 'Graphic 2'/>
+            </div>
+    
+            <div class = 'card-set' id = 'card-set2'>
+                <h3 id = 'card2'>
+                    Success-Based Payments
+                </h3>
+                <img class = 'cards' src = 'assets/process_2.svg' alt = 'Graphic 3'/>     
+            </div>
+
+            <div class = 'card-set' id = 'card-set3'>
+                <h3 id = 'card3'>
+                    Bespoke Career Help
+                </h3>
+                <img class = 'cards' src = 'assets/process_3.svg' alt = 'Graphic 4'/>                
+            </div>
+        </section>
+
+        <section id = 'process-course'>
+            <h2 id = 'course-description0'>
+                The Avion School Method
+            </h2>
+
+            <h3 class = 'course-description' id = 'course-description1'>
+                Step 1: Fill out the application. Qualify for the Pre-Course.
+            </h3>
+
+            <h3 class = 'course-description' id = 'course-description2'>
+                Step 2: Do well on the Pre-Course to confirm acceptance into Main Course.
+            </h3>
+
+            <h3 class = 'course-description' id = 'course-description3'>
+                Step 3: Choose full-time (36 full-day classes, 3 weekly) or part-time course (90 half-day, 5 weekly).
+            </h3>
+
+            <h3 class = 'course-description' id = 'course-description4'>
+                Step 4: Choose 'Pay Later' or pay upfront with a 57% discount!
+            </h3>
+
+            <h3 class = 'course-description' id = 'course-description5'>
+                Step 5: Break into tech!
+            </h3>
+        </section>
+
+    </div>
+
+
+<!-- Footer with email field HTML code -->
+    <footer id = 'homeContact'>
+
+        <form id = 'form' action = 'email_rejected.html' method = 'GET'>
+            <h2 id = 'contact-label'>Get A Callback</h2>
+
+            <h3 id = 'contact-description'>
+                Software is eating the world. Will you be food? Or will you feast?
+            </h3>
+
+            <!-- CHANGE TO CELLPHONE INPUT -->
+            <div id = 'submit-section'>
+                <label id = 'email-label'>Your Cellphone</label>
+                    <input id = 'email' type = 'email' placeholder = 'ceo@moteventures.com' name = 'email_data' />
+                    <!-- email_data = name attribute necessary for passing email address to email_rejected.html -->
+
+                <input id = 'submit' type = 'submit' value = 'TALK TO US TODAY!'/>
+            </div>
+        </form>
+
+    </footer>
+
+
+</body>
+</html>

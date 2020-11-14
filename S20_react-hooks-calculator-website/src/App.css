@@ -1,0 +1,730 @@
+/* BUG 1: Figure out complex JavaScript / JSX for investment calculator */
+/* BUG 2: Figure out breakpoint method for React Hooks */
+/* BUG 3: Optionally figure out ticker tape code */
+
+
+
+/* Page 0: UNIFORM HEADER CSS */
+/* Navbar CSS */
+.uniformHeader {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 15px;
+    padding-left: 35px;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+.uniformHeader .nav {
+    width: 400px;
+    height: 20px;
+    background-color: #FEFEFE;
+
+    position: relative;
+    left: -80px;
+
+    text-align: center;
+}
+  
+.uniformHeader .nav a {
+    padding: 10px 10px;
+
+    color: rgb(10, 10, 90);
+
+    font-size: 17px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Makes button colour change when hovering */
+.uniformHeader .nav a:hover {
+    padding: 13px 15px;
+
+    color: #FEFEFE;
+    background-color: rgb(10, 10, 90);
+    border-radius: 8px;
+}
+
+/* Log In button is at the right corner of uniform Header */
+.uniformHeader #signuporlogin {
+    padding: 13px 25px;
+    
+    height: 23px;
+
+    color: #FEFEFE;
+    background-color: rgb(10, 10, 90);
+    border-radius: 8px;
+
+    position: relative;
+    right: 30px;
+
+    font-size: 15px;
+    font-family: Verdana;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Img element CSS */
+.uniformHeader #logo {
+    display: flex;
+    
+    justify-content: flex-start;
+
+    width: 150px;
+    z-index: 100;
+
+    position: relative;
+    left: -350px;
+}
+
+
+
+/* Page 1: HOMEPAGE CSS */
+/* CSS for top-level divs in Homepage */
+.homeLanding {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 30px;
+    padding-top: 45px;
+
+    width: 1260px;
+    height: 480px;
+    background: linear-gradient(to bottom right, #fff 0%, #fff 50%, rgb(27,27,27) 50%, rgb(27,27,27) 100%);
+
+    position: relative;
+    left: -160px;
+    top: 15px;
+}
+
+.homeCriteria {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30px;
+    
+    align-items: center;
+
+    width: 1300px;
+    height: 500px;
+    background: #F9F9F9;
+
+    position: relative;
+    top: 20px;
+    left: -200px;
+}
+
+
+/* Text CSS for Homepage 1st landing section below header section */
+.homeLanding .landing-text {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+
+.homeLanding #title {
+    width: 480px;
+    color: #F9F9F9;
+
+    font-size: 45px;
+
+    position: relative;
+    top: 170px;
+    left: 40px;
+
+    font-weight: 250;
+    letter-spacing: 6px;
+}
+
+
+/* Sign Up-only button immediately below 1st landing section explanation */
+.homeLanding #getustoseed {
+    padding: 1px 1px;
+
+    width: 20%;
+    color: black;
+    background-color: #F9F9F9;
+    border-radius: 8px;
+
+    position: relative;
+    top: 150px;
+    left: 140px;
+
+    font-family: Verdana;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/* Img element CSS */
+.homeLanding #hero-image {
+    height: 280px;
+
+    position: relative;
+    left: -260px;
+    top: 20px;
+}
+
+
+/* Text CSS for 2nd criteria section below 1st landing section */
+.homeCriteria #criteria-headline {
+    width: 300px;
+
+    position: relative;
+    top: -130px;
+    left: 550px;
+
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.homeCriteria #criteria-explanation {
+    width: 400px;
+
+    position: relative;
+    top: 80px;
+    left: 200px;
+
+    font-size: 15px;
+    font-weight: normal;
+    text-align: justify;
+    line-height: 22px;
+}
+
+
+
+/* Page 2: REGISTRATION CSS */
+/* CSS for top-level divs in Registration */
+.registrationIntro {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 60px;
+
+    justify-content: center;
+
+    position: relative;
+    top: 10px;
+    left: 70px;
+}
+
+.registrationSurvey {
+    display: flex;
+
+    justify-content: center;
+
+    position: relative;
+    top: -10px;
+    left: 70px;
+}
+
+.calculatorWhole {
+    width: 300px;
+
+    position: relative;
+    top: -950px;
+    left: 700px;
+}
+
+
+/* Calculator element CSS */ 
+.calculatorDisplay #calculator-label {
+    display: flex;
+
+    justify-content: center;
+
+    font-weight: 550;
+}
+
+.calculatorWhole .calculatorKeys .calculator-rows {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+
+    justify-content: center;
+}
+
+.calculatorWhole .calculatorKeys {
+    padding: 1px 1px;
+
+    width: 50%;
+    background-color: #F9F9F9;
+    border-radius: 8px;
+
+    position: relative;
+    left: 75px;
+}
+
+/* 
+table {
+margin: auto;
+background-color: #222;
+width: 295px;
+max-width: 295px;
+height: 325px;
+text-align: center;
+border-radius: 4px;
+padding-right: 10px;
+}
+
+input {
+outline: 0;
+position: relative;
+left: 5px;
+top: 5px;
+border: 0;
+color: #495069;
+background-color: #fff;
+border-radius: 4px;
+width: 60px;
+height: 50px;
+float: left;
+margin: 5px;
+font-size: 20px;
+box-shadow: 0 4px rgba(0,0,0,0.2);
+margin-bottom: 15px;
+}
+
+input:hover {
+border: 0 solid #000;
+color: #495069;
+background-color: #fff;
+border-radius: 4px;
+width: 60px;
+height: 50px;
+float: left;
+margin: 5px;
+font-size: 20px;
+box-shadow: 0 4px #b0d2cf;
+}
+
+input:active {
+top: 4px;
+border: 0 solid #000;
+color: #495069;
+background-color: #fff;
+border-radius: 4px;
+width: 60px;
+height: 50px;
+float: left;
+margin: 5px;
+font-size: 20px;
+box-shadow: none;
+}
+
+#display {
+width: 265px;
+max-width: 270px;
+font-size: 26px;
+text-align: right;
+background-color: #bcbd95;
+float: left;
+}
+
+#display:hover {
+width: 270px;
+font-size: 26px;
+text-align: right;
+background-color: #bcbd95;
+box-shadow: 0 4px rgba(0,0,0,0.2);
+}
+
+#display:active {
+top: 5px;
+width: 270px;
+font-size: 26px;
+text-align: right;
+background-color: #bcbd95;
+box-shadow: 0 4px rgba(0,0,0,0.2);
+}
+
+.operator {
+background-color: #cee9ea;
+position: relative;
+}
+
+.operator:hover {
+background-color: #cee9ea;
+box-shadow: 0 4px #b0d2cf;
+}
+
+.operator:active {
+top: 4px;
+box-shadow: none;
+}
+
+#clear {
+float: left;
+position: relative;
+display: block;
+background-color: #ff9fa8;
+}
+
+#clear:hover {
+float: left;
+display: block;
+background-color: #F297A0;
+margin-bottom: 15px;
+box-shadow: 0 4px #CC7F86;
+}
+
+#clear:active {
+float: left;
+top: 4px;
+display: block;
+background-color: #F297A0;
+margin-bottom: 15px;
+box-shadow: none;
+} */
+
+
+/* Img element CSS */
+#upplane {
+    position: absolute;
+    top: -10px;
+    left: 900px;
+    width: 300px;
+}
+
+#leftplane {
+    position: absolute;
+    top: 800px;
+    left: 510px;
+    width: 300px;
+}
+
+
+/* Intro text CSS */
+.registrationIntro #intro-title {
+    font-weight: 530;
+}
+
+.registrationIntro #intro-description {
+    position: relative;
+    top: -20px;
+
+    font-weight: 250;
+}
+
+
+/* Survey headings CSS */
+/* First Part */
+.registrationSurvey .basic-section {
+    display: flex;
+    flex-direction: column;
+    margin: 100px;
+    
+    position: relative;
+    top: -90px;
+}
+
+.registrationSurvey #heading-label {
+    display: flex;
+
+    justify-content: center;
+
+    font-weight: 550;
+}
+
+.registrationSurvey .radio-stage {
+    width: 250px;
+}
+
+
+/* Second Part */
+.registrationSurvey .location-section {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    top: -160px;
+}
+
+.registrationSurvey .location-section #radio-label-2 {
+    display: flex;
+
+    justify-content: center;
+
+    font-weight: 550;
+}
+
+.location-UK {
+    display: flex;
+    padding: 15px;
+
+    justify-content: center;
+
+    position: relative;
+    top: -20px;
+}
+
+.location-density {
+    display: flex;
+
+    justify-content: center;
+
+    position: relative;
+    top: -20px;
+}
+
+
+/* Third Part */
+.registrationSurvey .hiring-section {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    top: -150px;
+}
+
+.registrationSurvey .hiring-section #checkbox-label {
+    display: flex;
+
+    justify-content: center;
+
+    font-weight: 550;
+}
+
+.checkbox-engineer {
+    display: flex;
+    padding: 15px;
+
+    justify-content: center;
+
+    position: relative;
+    top: -20px;
+}
+
+.checkbox-nonengineer {
+    display: flex;
+
+    justify-content: center;
+
+    position: relative;
+    top: -20px;
+}
+
+
+/* Fourth Part */
+.registrationSurvey .submit-section {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    position: relative;
+    top: -140px;
+}
+
+.registrationSurvey .submit-section #pitch-label {
+    display: flex;
+    
+    justify-content: center;
+
+    font-weight: 550;
+}
+
+/* Submit button is stylised */
+.registrationSurvey .submit-section #submit {
+    padding: 13px 25px;
+
+    width: 30%;
+    color: #FEFEFE;
+    background-color: rgb(10, 10, 90);
+    border-radius: 8px;
+
+    position: relative;
+    top: 15px;
+
+    font-family: Verdana;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+/* Page 3: ABOUT CSS */
+/* CSS for top-level divs in About */
+#serviceIntro {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 100px;
+
+    justify-content: center;
+
+    position: relative;
+    left: -30px;
+}
+
+#serviceExplanation {
+    display: flex;
+
+    justify-content: center;
+
+    position: relative;
+    top: 90px;
+    left: 360px;
+}
+
+#serviceFooter {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    position: relative;
+    top: 750px;
+    left: 360px;
+}
+
+
+/* Img and embedded video element CSS */
+#header-img {
+    width: 150px;
+}
+
+#question {
+    width: 15%;
+
+    position: absolute;
+    top: 110px;
+    left: 860px;
+}
+
+#tied {
+    width: 280px;
+
+    position: relative;
+}
+
+#interest {
+    width: 280px;
+
+    position: relative;
+}
+
+#small {
+    width: 220px;
+
+    position: relative;
+}
+
+#video {
+    position: absolute;
+    top: 0px;
+}
+
+
+/* Intro text CSS */
+#serviceIntro #intro-title {
+    position: relative;
+    top: -30px;
+    left: 185px;
+
+    font-weight: 530;
+}
+
+#serviceIntro #intro-description-1 {
+    position: relative;
+    top: -50px;
+    left: 188px;
+
+    font-weight: normal;
+    font-size: 17px;
+}
+
+#serviceIntro #intro-description-2 {
+    position: relative;
+    top: -60px;
+    left: 188px;
+
+    font-weight: normal;
+    font-size: 17px;
+}
+
+#serviceIntro #intro-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    position: relative;
+    top: 20px;
+
+    font-weight: 530;
+}
+
+#serviceIntro .intro-labels {
+    font-weight: 450;
+}
+
+#serviceIntro .intro-set {
+    display: flex;
+    flex-direction: column-reverse;
+
+    position: relative;
+    left: 200px;
+}
+
+#serviceIntro #intro-set2 {
+    position: relative;
+    left: 220px;
+}
+
+
+/* Footer CSS */
+#serviceFooter #submit-section {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+#serviceFooter #heading-label {
+    display: flex;
+
+    justify-content: center;
+
+    position: relative;
+    top: -90px;
+
+    font-weight: 530;
+}
+
+#serviceFooter #email-label {
+    position: relative;
+    top: -95px;
+}
+
+#serviceFooter #email {
+    position: relative;
+    top: -95px;
+}
+
+/* Submit button is stylised */
+#serviceFooter #submit {
+    padding: 13px 25px;
+
+    width: 30%;
+    color: #FEFEFE;
+    background-color: rgb(10, 10, 90);
+    border-radius: 8px;
+
+    position: relative;
+    top: -75px;
+
+    font-family: Verdana;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+
+
+
+

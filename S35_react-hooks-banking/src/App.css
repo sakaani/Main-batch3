@@ -1,0 +1,675 @@
+/* Bug 1: Can't extend background colour of Balance Footer to cover footer_graphic */
+/* Bug 2: Can't make breakpoints as simply as I could on a static page */
+
+
+
+/* Page 0: UNIFORM HEADER CSS */
+/* Navbar CSS */
+.uniformHeader {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    padding-left: 35px;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.uniformHeader .nav {
+    width: 1000px;
+    height: 20px;
+    background-color: #fefdff;
+
+    text-align: center;
+}
+  
+.uniformHeader .nav a {
+    padding: 10px 40px;
+
+    color: rgb(154, 25, 31);
+    
+    font-size: 17px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Makes button colour change when hovering */
+.uniformHeader .nav a:hover {
+    padding: 13px 15px;
+
+    color: #fefdff;
+    background-color: rgb(154, 25, 31);
+    border-radius: 8px;
+}
+
+/* Log Out button is at the right corner of uniform Header */
+.uniformHeader #logout {
+    padding: 13px 25px;
+    
+    height: 23px;
+
+    color: #fefdff;
+    background-color: rgb(154, 25, 31);
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-family: Verdana;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Logo element CSS */
+.uniformHeader #logo {
+    width: 230px;
+    z-index: 100;
+}
+
+
+
+/* Page 1: BALANCE CSS + FOOTER CSS */
+/* CSS for top-level divs in Balance webpage */
+.balanceAccount {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    padding-top: 45px;
+
+    position: relative;
+    left: -250px;
+    top: 120px;
+}
+
+
+/* Balance Hero section CSS */
+/* Code block directly below moves entire Account info stack */
+.balanceAccount .hero-text {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    position: relative;
+    top: -120px;
+    left: -120px;
+}
+
+.balanceAccount #title {
+    color: rgb(43, 45, 66);
+
+    position: relative;
+    left: 50px;
+
+    font-size: 32px;
+}
+
+.balanceAccount #status {
+    color: rgb(43,45,66);
+
+    position: relative;
+    left: 60px;
+    top: -30px;
+
+    font-weight: normal;
+}
+
+.balanceAccount #details {
+    color: rgb(43, 45, 66);
+
+    width: 350px;
+
+    position: relative;
+    left: 60px;
+
+    font-size: 22px;
+    text-align: center;
+}
+
+.balanceAccount #person {
+    width: 420px;
+    height: 240px;
+
+    position: relative;
+    left: 50px;
+}
+
+/* Code block directly below covers the dynamic money display */
+.balanceAccount .numbers {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    width: 500px;
+    justify-content: space-between;
+    background-color: rgb(219, 219, 219);
+
+    position: relative;
+    top: -380px;
+    left: 650px;
+
+    border-radius: 25px;
+}
+
+.balanceAccount .numbers-account {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+}
+
+.balanceAccount .numbers-account .numbers-money {
+    font-weight: 300;
+}
+
+/* Code block directly below Deposit, Withdrawal, and Transfer buttons */
+.balanceAccount .basic_banking {
+    position: relative;
+    top: -50px;
+    left: 90px;
+}
+
+/* CSS for Deposit, Withdrawal, and Transfer buttons */
+.balanceAccount .basic_banking_buttons {
+    padding: 10px 20px;
+
+    width: 70%;
+    color: #fefdff;
+    background-color: rgb(173, 147, 29);
+
+    position: relative;
+    top: -35px;
+    left: -150px;
+
+    border-radius: 8px;
+    font-family: Verdana;
+    font-size: 11px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* CSS for Deposit, Withdrawal, and Transfer input fields */
+.balanceAccount .basic_banking_inputs {
+    width: 50%;
+}
+
+/* Controls positioning for buttons and input fields */
+.balanceAccount .basic_banking_set1 {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    top: 30px;
+    left: -110px;
+}
+
+.balanceAccount .basic_banking_set2 {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    top: -210px;
+    left: 190px;
+}
+
+/* Granular CSS in case particular button-input field pairs need to be modified */
+.balanceAccount #checking-deposit {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    width: 200px;
+
+    position: relative;
+    top: -320px;
+    left: 650px;
+}
+
+.balanceAccount #checking-withdraw {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    width: 200px;
+
+    position: relative;
+    top: -320px;
+    left: 650px;
+}
+
+.balanceAccount #checking-transfer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    width: 200px;
+
+    position: relative;
+    top: -320px;
+    left: 650px;
+}
+
+.balanceAccount #savings-deposit {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    width: 200px;
+
+    position: relative;
+    top: -300px;
+    left: 650px;
+}
+
+.balanceAccount #savings-withdraw {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    width: 200px;
+
+    position: relative;
+    top: -300px;
+    left: 650px;
+}
+
+.balanceAccount #savings-transfer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    width: 200px;
+
+    position: relative;
+    top: -300px;
+    left: 650px;
+}
+
+
+/* TEMP: Placeholder for user marker - temporary use states and button for setting user */
+.balanceAccount #user-selection {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    width: 200px;
+
+    position: relative;
+    top: 470px;
+    left: 60px;
+}
+
+
+
+/* Page 2: LOGIN CSS */
+/* CSS for top-level divs in Login webpage */
+.loginTotal {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    left: 180px;
+    top: 170px;
+}
+
+.loginFooter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    align-items: center;
+    background-color: rgb(249, 249, 249);
+
+    position: relative;
+    left: 0px;
+    top: 385px;
+}
+
+
+/* Login input section CSS */
+.loginTotal .account-section {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.loginTotal .login-section {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    width: 450px;
+}
+
+/* Login button is stylised */
+.loginTotal .login-section .login {
+    padding: 1px 10px;
+
+    width: 35%;
+    height: 50px;
+    color: #fefdff;
+    background-color: rgb(173, 147, 29);
+
+    position: relative;
+    top: 20px;
+    left: 50px;
+
+    border-radius: 20px;
+    font-family: Verdana;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Separate CSS for text is needed */
+.loginTotal .login-section #login-text {
+    color: #fefdff;
+    
+    position: relative;
+    top: -21px;
+
+    border-radius: 20px;
+    font-family: Verdana;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Registration button is stylised */
+.loginTotal .login-section #enroll {
+    padding: 1px 10px;
+    
+    width: 30%;
+    height: 50%;
+    color: #fefdff;
+    background-color: rgb(120, 120, 120);
+
+    position: relative;
+    top: 20px;
+    left: -60px;
+
+    border-radius: 20px;
+    font-family: Verdana;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/* Balance Footer section CSS */
+.loginFooter #submit-section {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.loginFooter .footer_graphic {
+    width: 350px;
+
+    position: relative;
+    top: 160px;
+    left: -200px;
+}
+
+.loginFooter #form {
+    position: relative;
+    top: -15px;
+    left: 170px;
+}
+
+.loginFooter #contact-label {
+    display: flex;
+
+    justify-content: center;
+
+    position: relative;
+    top: -90px;
+}
+
+.loginFooter #contact-description {
+    display: flex;
+
+    width: 830px;
+    justify-content: center;
+
+    position: relative;
+    top: -80px;
+
+    font-weight: normal;
+}
+
+.loginFooter #phone-label {
+    position: relative;
+    top: -75px;
+}
+
+.loginFooter #phone {
+    position: relative;
+    top: -75px;
+}
+
+/* Submit button is stylised */
+.loginFooter #submit {
+    padding: 1px 10px;
+
+    width: 30%;
+    color: #fefdff;
+    background-color: rgb(173, 147, 29);
+
+    position: relative;
+    top: -35px;
+
+    border-radius: 25px;
+    font-family: Verdana;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+/* Page 3: REGISTRATION CSS */
+/* CSS for top-level divs in Registration */
+.registrationIntro {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+
+    justify-content: center;
+
+    position: relative;
+    left: -100px;
+}
+
+.registrationSurvey {
+    display: flex;
+
+    justify-content: center;
+
+    position: relative;
+    left: -100px;
+}
+
+#registrationLegal {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 80px;
+
+    align-items: center;
+
+    position: relative;
+    top: -60px;
+    left: -100px;
+}
+
+
+/* Intro text CSS */
+.registrationIntro #intro-description {
+    position: relative;
+    top: -20px;
+}
+
+
+/* Survey headings CSS */
+/* First Part */
+.registrationSurvey .basic-section {
+    display: flex;
+    flex-direction: column;
+    margin: 100px;
+
+    width: 300px;
+    
+    position: relative;
+    top: -110px;
+    left: 25px;
+}
+
+.registrationSurvey #heading-label {
+    display: flex;
+
+    justify-content: center;
+
+    position: relative;
+    top: -20px;
+}
+
+
+/* Second Part */
+.registrationSurvey .location-section {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    top: -190px;
+}
+
+#dropdown-address {
+    display: flex;
+
+    width: 300px;
+
+    position: relative;
+    left: 125px;
+}
+
+
+/* Third Part */
+.registrationSurvey .income-section {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    top: -160px;
+}
+
+#checkbox-label {
+    display: flex;
+
+    justify-content: center;
+}
+
+.checkbox-accomplishments {
+    display: flex;
+    padding: 15px;
+
+    width: 500px;
+    justify-content: center;
+
+    position: relative;
+    top: -20px;
+}
+
+
+/* Fourth Part */
+.registrationSurvey .submit-section {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    position: relative;
+    top: -150px;
+}
+
+#pitch-label {
+    display: flex;
+    
+    justify-content: center;
+}
+
+/* Submit button is stylised */
+.registrationSurvey .submit-section #submit {
+    padding: 1px 10px;
+
+    width: 20%;
+    color: #fefdff;
+    background-color: rgb(173,147,29);
+
+    position: relative;
+    top: 10px;
+
+    border-radius: 25px;
+    font-family: Verdana;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+/* Webpage 4: CUSTOMER ACCEPTANCE CSS */
+/* CSS for top-level divs in Customer Acceptance */
+.acceptedIntro {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 230px;
+
+    align-items: center;
+
+    position: relative;
+    left: -100px;
+}
+
+.acceptedIntro #intro-description {
+    font-weight: normal;
+}
+
+
+
+/* Webpage 5: INQUIRY CSS */
+/* CSS for top-level divs in Inquiry */
+.inquiredIntro {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 230px;
+
+    align-items: center;
+
+    position: relative;
+    left: -100px;
+}
+
+.inquiredIntro #intro-description {
+    font-weight: normal;
+}
+
+
+
+
+
+
